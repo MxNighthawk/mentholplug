@@ -1,0 +1,226 @@
+:root {
+	--colorRotation: 0;
+	--leftShift: 0;
+}
+::placeholder {
+	color: #bbb;
+}
+
+#mapArea {
+	background: hsl(var(--interfaceHue), calc(var(--interfaceSaturation) * 100%), 5%);
+	color: white;
+
+	height: 80vh;
+	border: solid 4px hsl(var(--interfaceHue), calc(var(--interfaceSaturation) * 100%), 5%);
+	border-radius: 0px 0px 4px 4px;
+}
+#mapDrag {
+	min-height: 80vh;
+}
+
+#mapFilters {
+	position: absolute;
+	background: hsl(var(--interfaceHue), calc(var(--interfaceSaturation) * 100%), 5%);
+	border-radius: 4px;
+	
+	padding: 4px;
+	
+	max-width: 420px;
+	width: calc(100% - 16px);
+	
+	bottom: 4px;
+	right: 4px;
+}
+#nameSearch {
+	resize: none;
+	width: calc(100% - 12px);
+
+	background: hsl(var(--interfaceHue), calc(var(--interfaceSaturation) * 100%), 23%);
+	color: white;
+	padding: 4px;
+
+	border: 0px;
+	border-radius: 4px;
+	padding: 6px;
+
+	margin-bottom: 4px;
+}
+#colorFilters {
+	display: flex;
+	gap: 4px;
+}
+
+.columnBackground {
+	position: absolute;
+	display: flex;
+	gap: 4px;
+	
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+.roadColumn {
+	background-image: url('../Graphics/Map%20Stripe.webp');
+	background-size: contain;
+	background-repeat: repeat-y;
+
+	background-blend-mode: multiply;
+	background-color: hsl(var(--interfaceHue), calc(var(--interfaceSaturation) * 100%), 80%);
+	
+	image-rendering: pixelated;
+	height: max-content;
+
+	min-height: 80vh;
+	height: 100%;
+
+	min-width: 160px;
+	border-radius:4px;
+}
+.dateStamp {
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(10px);
+
+	border-bottom: solid 4px #222;
+	border-radius: 4px 4px 0px 0px;
+
+	margin: 0px;
+	padding: 6px 8px;
+	
+	text-align: center;
+}
+
+.currentDay.roadColumn {
+	background-blend-mode: overlay;
+	box-shadow: 0px 0px 8px hsl(120, 30%, 25%);
+	background-color: hsl(120, 30%, 25%);
+}
+.currentDay .dateStamp {
+	background-color: hsl(120, 40%, 60%);
+}
+
+#orderStrips {
+	position: relative;
+	padding: 4px;
+	
+	left: calc((41px) * var(--leftShift));
+	
+	padding-top: 36px;
+	width: max-content;
+}
+
+.orderRow {
+	position: relative;
+	display: flex;
+	column-gap: 12px;
+	
+	left: 0px;
+	right: 0px;
+}
+.order {
+	position: relative;
+	left: calc((41px) * var(--leftShift));
+	cursor: pointer;
+	filter: drop-shadow(0px 2px 2px hsla(var(--colorRotation), 100%, 19%, 0.75));
+	
+	margin-top: 4px;
+	height: max-content;
+	
+	overflow-y: hidden;
+	transition: height 0.2s ease;
+	border-radius: 2px;
+
+	user-select: none;
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+}
+.fill {
+	background-color: black;
+	opacity: 0.25;
+	
+	position: absolute;
+	right: 0px;
+
+	height: 100%;
+	width: 100%;
+}
+.fillTile, .userETA, .pricePaid, .orderTile {
+	position: relative;
+	
+	text-shadow: 0px 0px 4px black;
+	font-family: "Rajdhani Semi";
+	font-size: 18px;
+}
+
+.fillTile {
+	border-radius: 2px;
+}
+.orderTile {
+	border-radius: 2px;
+	background-color: hsl(var(--colorRotation), 100%, 29%);
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.orderTile p{
+	margin: 0px;
+	padding: 8px;
+}
+
+.userETA {
+	border-radius: 2px;
+	background-color: hsl(var(--colorRotation), 100%, 41%);
+
+	width: 100%;
+	
+	font-family: "Rajdhani Bold";
+	justify-content: space-between;
+	display: flex;
+}
+.orderTiles {
+	background-color: hsl(var(--colorRotation), 100%, 21%);
+	border-bottom-right-radius: 2px;
+	overflow: hidden;
+
+	display: grid;
+	gap: 4px;
+	padding: 4px;
+}
+.tileRow {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 4px;
+}
+.pricePaid {
+	background-color: hsl(var(--colorRotation), 100%, 36%);
+	border-radius: 0px 0px 2px 2px;
+	
+	width: 96px;
+}
+
+.username, .eta, .state, .orderTile p {
+	position: relative;
+}
+.pricePaid, .username, .eta{
+	margin: 0px;
+	padding: 6px 8px;
+}
+.eta {
+	text-align: right;
+}
+
+.state {
+	background-color: hsl(var(--colorRotation), 100%, 41%);
+	font-size: 14px;
+	
+	height: min-content;
+	flex: auto;
+}
+.state p {
+	width: 100%;
+	text-align: center;
+}
+
+@media (max-width: 500px) {
+	#colorFilters {
+		flex-direction: column;
+	}
+}
