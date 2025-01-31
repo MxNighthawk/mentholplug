@@ -155,17 +155,16 @@ class OrderStrip
 let order = document.getElementsByClassName("order");
 let stripParent = document.getElementById("orderStrips");
 
-//How many columns to shift all the strips by. (4 = 1 day, 8 = 2 days, etc.)
-stripParent.style.setProperty("--leftShift", 4);
+// stripParent.style.setProperty("--leftShift", 4);
 
 let orderStrips =
 [
 	new OrderStrip(order[0], 0,
-	["Customer Name", 1, "Days", "", 
+	["MxNighthawk - Colored Head", 7, "Days", "", 
 		[
-			new Step(order[0], 10, "Sketch", true, 0, 0),
-			new Step(order[0], 10, "Lineart", true, 0, 0),
-			new Step(order[0], 10, "Color", false, undefined, 0),
+			new Step(order[0], 5, "Sketch", false, undefined, 0),
+			new Step(order[0], 5, "Lineart", false, undefined, 0),
+			new Step(order[0], 5, "Color", false, undefined, 0),
 		]
 	]),
 ];
