@@ -27,19 +27,31 @@ class Step
 		let destiation = tileContainer;
 		let colorPart = 200 + 55 * Math.pow(completion / 100, 2);
 
+		let row = document.createElement('div');
+		row.classList.add("tileRow");
+
 		if(makeRow)
-			tileContainer.innerHTML += "<div class='tileRow'>";
+			tileContainer.appendChild(row);
 		
 		if(includedInRow != undefined)
 			destiation = tileContainer.getElementsByClassName("tileRow")[includedInRow];
+		
+		let tile = document.createElement('div');
+		let fill = document.createElement('div');
+		let desc = document.createElement('p');
 
-		destiation.innerHTML +=
-		`<div class="orderTile" style="color: ">
-			<div class="fill" style="width: ${100 - completion}%"></div>
-			<p style="color: rgb(${colorPart}, ${colorPart}, ${colorPart})">
-				$${this.priceTag}, ${this.pieceType}
-			</p>
-		</div>`;
+		tile.classList.add("orderTile");
+		tile.style.color = "";
+
+		fill.classList.add("fill");
+		fill.style.width = `${100 - completion}%`;
+
+		desc.style.color = `rgb(${colorPart}, ${colorPart}, ${colorPart}`;
+		desc.innerText = `${this.priceTag > 0 ? `$${this.priceTag},`: ""} ${this.pieceType}`;
+		
+		destiation.appendChild(tile);
+		tile.appendChild(fill);
+		tile.appendChild(desc);
 	}
 }
 class OrderStrip
@@ -162,9 +174,12 @@ let orderStrips =
 	new OrderStrip(order[0], 0,
 	["MxNighthawk - Colored Head", 7, "Days", "", 
 		[
-			new Step(order[0], 5, "Sketch", false, undefined, 0),
-			new Step(order[0], 5, "Lineart", false, undefined, 0),
-			new Step(order[0], 5, "Color", false, undefined, 0),
+			new Step(order[0], 0, "Sketch Installment", true, 0, 0),
+			new Step(order[0], 5, "Sketch", false, 0, 0),
+			new Step(order[0], 0, "Lineart Installment", true, 1, 0),
+			new Step(order[0], 5, "Lineart", false, 1, 0),
+			new Step(order[0], 0, "Color Installment", true, 2, 0),
+			new Step(order[0], 5, "Color", false, 2, 0),
 		]
 	]),
 ];
