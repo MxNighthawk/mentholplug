@@ -207,7 +207,7 @@ let orderStrips =
 	new OrderStrip(order[3], 4,
 	["Marco - Colored Half Body", 12, "Days", "", 
 		[
-			new Step(order[3], 12.33, "Sketch Installment", true, 0, 100),
+			new Step(order[3], 12.33, "Sketch Installment", true, 0, 0),
 			new Step(order[3], 0, "Sketch Progress", false, 0, 0),
 			new Step(order[3], 12.33, "Lineart Installment", true, 1, 0),
 			new Step(order[3], 0, "Lineart Progress", false, 1, 0),
