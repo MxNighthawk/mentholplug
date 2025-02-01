@@ -47,7 +47,7 @@ class Step
 		fill.style.width = `${100 - completion}%`;
 
 		desc.style.color = `rgb(${colorPart}, ${colorPart}, ${colorPart}`;
-		desc.innerText = `${this.priceTag > 0 ? `$${this.priceTag},`: ""} ${this.pieceType}`;
+		desc.innerText = `${this.priceTag > 0 ? `$${this.priceTag.toFixed(2)},`: ""} ${this.pieceType}`;
 		
 		destiation.appendChild(tile);
 		tile.appendChild(fill);
@@ -172,7 +172,7 @@ let stripParent = document.getElementById("orderStrips");
 let orderStrips =
 [
 	new OrderStrip(order[0], 0,
-	["MxNighthawk - Colored Head", 7, "Days", "", 
+	["MxNighthawk - Colored Head", 7, "Days", "focused", 
 		[
 			new Step(order[0], 5, "Sketch Installment", true, 0, 100),
 			new Step(order[0], 0, "Sketch Progress", false, 0, 0),
@@ -180,6 +180,28 @@ let orderStrips =
 			new Step(order[0], 0, "Lineart Progress", false, 1, 0),
 			new Step(order[0], 5, "Color Installment", true, 2, 0),
 			new Step(order[0], 0, "Color Progress", false, 2, 0),
+		]
+	]),
+	new OrderStrip(order[1], 0,
+	["Authurenglebert - Lineart Full Body", 7, "Days", "", 
+		[
+			new Step(order[1], 22.5, "Sketch Installment", true, 0, 0),
+			new Step(order[1], 0, "Sketch Progress", false, 0, 0),
+			new Step(order[1], 22.5, "Lineart Installment", true, 1, 0),
+			new Step(order[1], 0, "Lineart Progress", false, 1, 0),
+		]
+	]),
+	new OrderStrip(order[2], 0,
+	["Bloomako - Rendered Full Body", 21, "Days", "", 
+		[
+			new Step(order[2], 18.75, "Sketch Installment", true, 0, 0),
+			new Step(order[2], 0, "Sketch Progress", false, 0, 0),
+			new Step(order[2], 18.75, "Lineart Installment", true, 1, 0),
+			new Step(order[2], 0, "Lineart Progress", false, 1, 0),
+			new Step(order[2], 18.75, "Color Installment", true, 2, 0),
+			new Step(order[2], 0, "Color Progress", false, 2, 0),
+			new Step(order[2], 18.75, "Render Installment", true, 2, 0),
+			new Step(order[2], 0, "Render Progress", false, 2, 0),
 		]
 	]),
 ];
