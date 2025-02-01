@@ -62,7 +62,7 @@ function DisplayRelativeTime()
 	if(!use12HourCycle)
 		pacificTime.innerText = `Artist Timezone - ${hour}:${mins}:${secs}`;
 	else
-		pacificTime.innerText = `Artist Timezone - ${hour > 12 ? hour - 12 : hour}:${mins}:${secs} ${parseInt(hour / 12) == 1 ? "PM" : "AM"}`;		
+		pacificTime.innerText = `Artist Timezone - ${hour > 12 ? hour - 12 : hour == 0 ? 12 : hour}:${mins}:${secs} ${parseInt(hour / 12) == 1 ? "PM" : "AM"}`;		
 }
 
 function SwapTimeFormat()
