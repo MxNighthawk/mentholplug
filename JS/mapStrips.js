@@ -192,10 +192,10 @@ let orderStrips =
 		]
 	]),
 	new OrderStrip(order[2], 0,
-	["Bloomako - Rendered Full Body", 21, "Days", "delayed", 
+	["Bloomako - Rendered Full Body", 21, "Days", "focused", 
 		[
-			new Step(order[2], 18.75, "Sketch Installment", true, 0, 0),
-			new Step(order[2], 0, "Sketch Progress", false, 0, 0),
+			new Step(order[2], 18.75, "Sketch Installment", true, 0, 100),
+			new Step(order[2], 0, "Sketch Progress", false, 0, 25),
 			new Step(order[2], 18.75, "Lineart Installment", true, 1, 0),
 			new Step(order[2], 0, "Lineart Progress", false, 1, 0),
 			new Step(order[2], 18.75, "Color Installment", true, 2, 0),
