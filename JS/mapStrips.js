@@ -183,11 +183,11 @@ let orderStrips =
 		]
 	]),
 	new OrderStrip(order[1], 32,
-	["Authurenglebert - Lineart Full Body", 7, "Days", "delayed", 
+	["Authurenglebert - Lineart Full Body", 7, "Days", "focused", 
 		[
 			new Step(order[1], 22.5, "Sketch Installment", true, 0, 100),
-			new Step(order[1], 0, "Sketch Progress (Revising)", false, 0, 50),
-			new Step(order[1], 22.5, "Lineart Installment", true, 1, 0),
+			new Step(order[1], 0, "Sketch Progress (Revising)", false, 0, 100),
+			new Step(order[1], 22.5, "Lineart Installment", true, 1, 100),
 			new Step(order[1], 0, "Lineart Progress", false, 1, 0),
 		]
 	]),
