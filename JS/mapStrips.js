@@ -195,7 +195,7 @@ let orderStrips =
 			new Step(order[1], 0, "Render Progress", false, 2, 0),
 		]
 	]),
-	new OrderStrip(order[3], 32,
+	new OrderStrip(order[2], 32,
 	["Gravy - Rendered Full Body", 28, "Days", "", 
 		[
 			new Step(order[2], 18.75, "Sketch Installment", true, 0, 0),
