@@ -171,7 +171,7 @@ let stripParent = document.getElementById("orderStrips");
 
 let orderStrips =
 [
-	new OrderStrip(order[0], 32,
+	new OrderStrip(order[0], 48 + 13 * 4,
 	["MxNighthawk - Colored Head", 7, "Days", "delayed", 
 		[
 			new Step(order[0], 5, "Sketch Installment", true, 0, 100),
@@ -186,9 +186,9 @@ let orderStrips =
 	["Bloomako - Rendered Full Body", 21, "Days", "focused", 
 		[
 			new Step(order[1], 18.75, "Sketch Installment", true, 0, 100),
-			new Step(order[1], 0, "Sketch Progress", false, 0, 25),
-			new Step(order[1], 18.75, "Lineart Installment", true, 1, 0),
-			new Step(order[1], 0, "Lineart Progress", false, 1, 0),
+			new Step(order[1], 0, "Sketch Progress", false, 0, 100),
+			new Step(order[1], 18.75, "Lineart Installment", true, 1, 100),
+			new Step(order[1], 0, "Lineart Progress", false, 1, 25),
 			new Step(order[1], 18.75, "Color Installment", true, 2, 0),
 			new Step(order[1], 0, "Color Progress", false, 2, 0),
 			new Step(order[1], 18.75, "Render Installment", true, 2, 0),
