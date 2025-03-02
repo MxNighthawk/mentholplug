@@ -171,8 +171,8 @@ let stripParent = document.getElementById("orderStrips");
 
 let orderStrips =
 [
-	new OrderStrip(order[0], 48 + 13 * 4,
-	["MxNighthawk - Colored Head", 7, "Days", "delayed", 
+	new OrderStrip(order[0], 84,
+	["MxNighthawk - Colored Head", 7, "Days", "focused", 
 		[
 			new Step(order[0], 5, "Sketch Installment", true, 0, 100),
 			new Step(order[0], 0, "Sketch Progress", false, 0, 25),
@@ -183,29 +183,16 @@ let orderStrips =
 		]
 	]),
 	new OrderStrip(order[1], 0,
-	["Bloomako - Rendered Full Body", 21, "Days", "focused", 
+	["Gravy - Rendered Full Body", 28, "Days", "", 
 		[
-			new Step(order[1], 18.75, "Sketch Installment", true, 0, 100),
-			new Step(order[1], 0, "Sketch Progress", false, 0, 100),
-			new Step(order[1], 18.75, "Lineart Installment", true, 1, 100),
-			new Step(order[1], 0, "Lineart Progress", false, 1, 100),
+			new Step(order[1], 18.75, "Sketch Installment", true, 0, 0),
+			new Step(order[1], 0, "Sketch Progress", false, 0, 0),
+			new Step(order[1], 18.75, "Lineart Installment", true, 1, 0),
+			new Step(order[1], 0, "Lineart Progress", false, 1, 0),
 			new Step(order[1], 18.75, "Color Installment", true, 2, 0),
 			new Step(order[1], 0, "Color Progress", false, 2, 0),
 			new Step(order[1], 18.75, "Render Installment", true, 2, 0),
 			new Step(order[1], 0, "Render Progress", false, 2, 0),
-		]
-	]),
-	new OrderStrip(order[2], 32,
-	["Gravy - Rendered Full Body", 28, "Days", "", 
-		[
-			new Step(order[2], 18.75, "Sketch Installment", true, 0, 0),
-			new Step(order[2], 0, "Sketch Progress", false, 0, 0),
-			new Step(order[2], 18.75, "Lineart Installment", true, 1, 0),
-			new Step(order[2], 0, "Lineart Progress", false, 1, 0),
-			new Step(order[2], 18.75, "Color Installment", true, 2, 0),
-			new Step(order[2], 0, "Color Progress", false, 2, 0),
-			new Step(order[2], 18.75, "Render Installment", true, 2, 0),
-			new Step(order[2], 0, "Render Progress", false, 2, 0),
 		]
 	]),
 ];

@@ -34,7 +34,7 @@ let filterName = "";
 for (let i = 0; i < dateStamps.length; i++) {
 	const element = dateStamps[i];
 	
-	var d = new Date("Feburary, 2025");
+	var d = new Date("Feburary 9, 2025");
 	d.setUTCDate(d.getUTCDate() + i);
 	d.setUTCHours(today.getUTCHours());
 	
