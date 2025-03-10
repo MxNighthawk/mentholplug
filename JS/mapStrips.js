@@ -175,8 +175,8 @@ let orderStrips =
 	["MxNighthawk - Colored Head", 7, "Days", "focused", 
 		[
 			new Step(order[0], 5, "Sketch Installment", true, 0, 100),
-			new Step(order[0], 0, "Sketch Progress", false, 0, 75),
-			new Step(order[0], 5, "Lineart Installment", true, 1, 0),
+			new Step(order[0], 0, "Sketch Progress", false, 0, 100),
+			new Step(order[0], 5, "Lineart Installment", true, 1, 100),
 			new Step(order[0], 0, "Lineart Progress", false, 1, 0),
 			new Step(order[0], 5, "Color Installment", true, 2, 0),
 			new Step(order[0], 0, "Color Progress", false, 2, 0),
@@ -186,7 +186,7 @@ let orderStrips =
 	["Gravy - Rendered Full Body", 28, "Days", "focused", 
 		[
 			new Step(order[1], 18.75, "Sketch Installment", true, 100, 0),
-			new Step(order[1], 100, "Sketch Progress", false, 0, 0),
+			new Step(order[1], 100, "Sketch Progress", false, 100, 0),
 			new Step(order[1], 18.75, "Lineart Installment", true, 1, 0),
 			new Step(order[1], 0, "Lineart Progress", false, 1, 0),
 			new Step(order[1], 18.75, "Color Installment", true, 2, 0),
