@@ -170,19 +170,5 @@ let stripParent = document.getElementById("orderStrips");
 // stripParent.style.setProperty("--leftShift", 4);
 
 let orderStrips =
-[
-	new OrderStrip(order[0], 0,
-	["Gravy - Rendered Full Body", 28, "Days", "focused", 
-		[
-			new Step(order[0], 18.75, "Sketch Installment", true, 0, 100),
-			new Step(order[0], 0, "Sketch Progress", false, 0, 100),
-			new Step(order[0], 18.75, "Lineart Installment", true, 1, 0),
-			new Step(order[0], 0, "Lineart Progress", false, 1, 0),
-			new Step(order[0], 18.75, "Color Installment", true, 2, 0),
-			new Step(order[0], 0, "Color Progress", false, 2, 0),
-			new Step(order[0], 18.75, "Render Installment", true, 2, 0),
-			new Step(order[0], 0, "Render Progress", false, 2, 0),
-		]
-	]),
-];
+[];
 let focused = [], delayed = [], queued = [];
